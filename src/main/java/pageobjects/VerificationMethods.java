@@ -12,8 +12,7 @@ import testreporter.TestReporter;
 public class VerificationMethods {
 
 	int delay = 10000;
-	
-	//constructor
+
     public WebDriver driver;
 
     public VerificationMethods(WebDriver driver) {
@@ -21,27 +20,7 @@ public class VerificationMethods {
     }
 
     //-------------------Actions------------------------------------------------------
-    
-    //wait for element to be enabled and then send text
-    protected void waitThenType(WebElement element, String text, String elementName){
-        TestReporter.logTestStep("Entering text '" + text +"' to element '"+elementName+"'");
-        WaitForElementToBeEnabled(element, elementName);
-
-        element.clear();
-        element.sendKeys(text);
-    }
-    
-    //send text to element but not include the text in report
-    protected void typeHidden(WebElement element, String text, String elementName){
-        TestReporter.logTestStep("Entering text '*********' to element '"+elementName+"'");
-
-        element.click();
-        element.clear();
-        element.sendKeys(text);
-    }
-
-
-    
+       
     //wait for element to be enabled 
     protected void WaitForElementToBeEnabled(WebElement element, String elementName) {
       Boolean isVisibleAndEnabled = false;
@@ -84,6 +63,26 @@ public class VerificationMethods {
         element.click();
         TestReporter.logTestStep("Element '"   + elementName + "' clicked");
     }
+
+    //wait for element to be enabled and then send text
+    protected void waitThenType(WebElement element, String text, String elementName){
+        TestReporter.logTestStep("Entering text '" + text +"' to element '"+elementName+"'");
+        WaitForElementToBeEnabled(element, elementName);
+
+        element.clear();
+        element.sendKeys(text);
+    }
+    
+    //send text to element but not include the text in report
+    protected void typeHidden(WebElement element, String text, String elementName){
+        TestReporter.logTestStep("Entering text '*********' to element '"+elementName+"'");
+
+        element.click();
+        element.clear();
+        element.sendKeys(text);
+    }
+
+
 
     
     //--------------------Verification methods------------------------------------------------

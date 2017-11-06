@@ -46,8 +46,8 @@ public class ListOfPerformanceReviewsRequiringFeedback extends VerificationMetho
     	return(employeePosition);
     }
     
-    //Submit feedback for employee by name  
-    public void SubmitFeedback(String employeeName){
+    //Click Submit feedback for employee by name  
+    public void ClickSubmitFeedback(String employeeName){
     	int employeePosition=getIndexEmployeeName(employeeName);
     	if (employeePosition>=0){
     		click(submitFeedbackColumn.get(employeePosition), "Submit Feedback button");
@@ -69,7 +69,7 @@ public class ListOfPerformanceReviewsRequiringFeedback extends VerificationMetho
 
     //verify employee exists on list by employee's name 
     public void VerifyEmployeeOnList(String employeeName){
-    	VerifyElementNotOnListByTextNotCaseSensitive(employeesNamesColumn, employeeName, "Employee '"+employeeName+"' doesn't exist on the list of employees but is expected");
+    	VerifyElementOnListByTextNotCaseSensitive(employeesNamesColumn, employeeName, "Employee '"+employeeName+"' doesn't exist on the list of employees but is expected");
     }
 
 }

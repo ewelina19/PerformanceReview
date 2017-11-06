@@ -1,9 +1,6 @@
 package PerformanceReview;
 
-import java.util.Map;
-
 import org.openqa.selenium.WebDriver;
-
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
@@ -11,11 +8,8 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import pageobjects.Common;
-import pageobjects.EmployeeDetails;
-import pageobjects.ListOfEmployees;
 import pageobjects.ListOfPerformanceReviewsRequiringFeedback;
 import pageobjects.PerformanceReviewDetails;
-import testconfiguration.TestRunSettings;
 
 
 public class PerformanceReviewsEmployeeTests {
@@ -52,15 +46,14 @@ public class PerformanceReviewsEmployeeTests {
     @Test(description = "", groups = {""})
     public void VerifyEmployeesCount() {
 
-        // Click Next
     	listOfPerformanceReviewsRequiringFeedback.VerifyCountOfEmployees(0);
     }
 
-    //Verify list of employees is updated after a new employee added
+    //Verify submit feedback by employee's name
     @Test(description = "", groups = {""})
     public void VerifySubmitFeedback() {
     	listOfPerformanceReviewsRequiringFeedback.VerifyEmployeeOnList("employeeName");
-    	listOfPerformanceReviewsRequiringFeedback.SubmitFeedback("employeeName");
+    	listOfPerformanceReviewsRequiringFeedback.ClickSubmitFeedback("employeeName");
     	performanceReviewDetails.EnterPerformanceReviewDetails("review");
     	listOfPerformanceReviewsRequiringFeedback.VerifyEmployeeNotOnList("employeeName");
     }
