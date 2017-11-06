@@ -55,6 +55,7 @@ public class PerformanceReviewsEmployeeTests {
     	listOfPerformanceReviewsRequiringFeedback.VerifyEmployeeOnList("employeeName");
     	listOfPerformanceReviewsRequiringFeedback.ClickSubmitFeedback("employeeName");
     	performanceReviewDetails.EnterPerformanceReviewDetails("review");
+    	performanceReviewDetails.ClickPerformanceReviewSubmitButton();
     	listOfPerformanceReviewsRequiringFeedback.VerifyEmployeeNotOnList("employeeName");
     }
     
