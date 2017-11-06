@@ -1,0 +1,17 @@
+---
+employees:
+  -
+    employee-first-name: Name1
+    employee-surname: Surname1
+    employee-position: Position1
+    employee-date-started: 01/01/2016
+  -
+    employee-first-name: Name2
+    employee-surname: Surname2
+    employee-position: Position2
+    employee-date-started: 01/03/2015
+  -
+    employee-first-name: Name3
+    employee-surname: Surname3
+    employee-position: Position3
+    employee-date-started: 01/06/2016

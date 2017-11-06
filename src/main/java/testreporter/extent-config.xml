@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extentreports>
+    <configuration>
+        <!-- report theme -->
+        <!-- standard, dark -->
+        <theme>standard</theme>
+
+        <!-- document encoding -->
+        <!-- defaults to UTF-8 -->
+        <encoding>UTF-8</encoding>
+
+        <!-- protocol for script and stylesheets -->
+        <!-- defaults to https -->
+        <protocol>https</protocol>
+
+        <!-- title of the document -->
+        <documentTitle>REPKNIGHT - Automation Run Report</documentTitle>
+
+        <!-- report name - displayed at top-nav -->
+        <reportName>REPKNIGHT - Automation Run Report</reportName>
+
+        <!--&lt;!&ndash; report headline - displayed at top-nav, after reportHeadline &ndash;&gt;-->
+        <!--<reportHeadline>General Testing</reportHeadline>-->
+
+        <!-- global date format override -->
+        <!-- defaults to yyyy-MM-dd -->
+        <dateFormat>yyyy-MM-dd</dateFormat>
+
+        <!-- global time format override -->
+        <!-- defaults to HH:mm:ss -->
+        <timeFormat>HH:mm:ss</timeFormat>
+
+        <!-- custom javascript -->
+        <scripts>
+            <![CDATA[
+        $(document).ready(function() {
+
+        });
+      ]]>
+        </scripts>
+
+        <!-- custom styles -->
+        <styles>
+            <![CDATA[
+                .logo-content {
+                    display: none;
+                }
+            ]]>
+        </styles>
+    </configuration>
+</extentreports>

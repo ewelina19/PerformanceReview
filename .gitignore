@@ -1,0 +1,8 @@
+*.idea
+/target/
+/test-output/
+/.DS_Store
+/.classpath
+/.project
+/ek-debugBA.xml
+/non-prod-BreachAlert2-ek.xml
